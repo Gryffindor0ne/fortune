@@ -2,27 +2,19 @@
 
 @layer base {
   :root {
-    /* 라이트 모드 (기본값) */
     --background: #ffffff;
     --foreground: #111111;
-    --font-sawarabi-mincho: "Sawarabi Mincho";
   }
 
   body {
     background: var(--background);
     color: var(--foreground);
-    /* 기본 폰트는 한글용 */
-    font-family: "Noto Serif KR", serif;
+    /* 기본 폰트는 한국어 명조체 */
+    font-family: var(--font-noto-serif-kr), serif;
   }
 
-  /* 한자(CJK 통합 한자) 범위에만 Sawarabi Mincho 적용 */
-  * {
-    font-family: "Noto Serif KR", serif;
-  }
-
-  /* 한자 유니코드 범위 */
-  *:lang(zh), /* 중국어 한자 */
-    [lang*="zh"] * {
-    font-family: "Sawarabi Mincho", "Noto Serif KR", serif;
+  /* 한자용 폰트 클래스 */
+  .hanja-font {
+    font-family: var(--font-sawarabi-mincho), serif;
   }
 }

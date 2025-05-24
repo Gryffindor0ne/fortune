@@ -84,7 +84,7 @@ const SajuChart = () => {
             {FIXED_HEADERS.columns.map((column, index) => (
               <div
                 key={`header-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-2 text-center text-xl font-bold"
+                className="border-r last:border-r-0 border-gray-800 p-2 text-center text-xl font-bold hanja-font"
               >
                 {column}
               </div>
@@ -94,7 +94,7 @@ const SajuChart = () => {
           {/* 십성 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
             <div className="flex flex-col items-center justify-center border-r border-gray-800 p-2 text-center text-xs">
-              <div>{FIXED_HEADERS.rows[0].main}</div>
+              <div className="hanja-font">{FIXED_HEADERS.rows[0].main}</div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[0].sub}
               </div>
@@ -104,7 +104,7 @@ const SajuChart = () => {
                 key={`star-${index}`}
                 className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
               >
-                <div className="text-sm font-bold">{star.main}</div>
+                <div className="text-sm font-bold hanja-font">{star.main}</div>
                 <div className="text-[10px] text-gray-500">{star.sub}</div>
               </div>
             ))}
@@ -112,7 +112,7 @@ const SajuChart = () => {
 
           {/* 천간 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
-            <div className="flex flex-col items-center justify-center border-r border-gray-800 p-1 text-center text-xs">
+            <div className="flex flex-col items-center justify-center border-r border-gray-800 p-1 text-center text-xs hanja-font">
               <div>{FIXED_HEADERS.rows[1].main}</div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[1].sub}
@@ -131,9 +131,9 @@ const SajuChart = () => {
                       {stem.top}
                     </div>
                   )}
-                  <div className="text-xl">{stem.main}</div>
+                  <div className="text-xl hanja-font">{stem.main}</div>
                   {stem.bottom && (
-                    <div className="text-[10px] absolute -bottom-0">
+                    <div className="text-[10px] absolute -bottom-0 hanja-font">
                       {stem.bottom}
                     </div>
                   )}
@@ -145,7 +145,7 @@ const SajuChart = () => {
           {/* 지지 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
             <div className="flex flex-col items-center justify-center border-r border-gray-800 p-1 text-center text-xs">
-              <div>{FIXED_HEADERS.rows[2].main}</div>
+              <div className="hanja-font">{FIXED_HEADERS.rows[2].main}</div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[2].sub}
               </div>
@@ -163,9 +163,9 @@ const SajuChart = () => {
                       {branch.top}
                     </div>
                   )}
-                  <div className="text-xl">{branch.main}</div>
+                  <div className="text-xl hanja-font">{branch.main}</div>
                   {branch.bottom && (
-                    <div className="text-[10px] absolute -bottom-0">
+                    <div className="text-[10px] absolute -bottom-0 hanja-font">
                       {branch.bottom}
                     </div>
                   )}
@@ -177,7 +177,7 @@ const SajuChart = () => {
           {/* 십이운성 라벨 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
             <div className="flex flex-col items-center justify-center border-r border-gray-800 p-2 text-center text-xs">
-              <div>{FIXED_HEADERS.rows[3].main}</div>
+              <div className="hanja-font">{FIXED_HEADERS.rows[3].main}</div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[3].sub}
               </div>
@@ -187,7 +187,7 @@ const SajuChart = () => {
                 key={`twelve-label-${index}`}
                 className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
               >
-                <div className="text-sm font-bold">{label.main}</div>
+                <div className="text-sm font-bold hanja-font">{label.main}</div>
                 <div className="text-gray-500 text-[10px]">{label.sub}</div>
               </div>
             ))}
@@ -196,7 +196,7 @@ const SajuChart = () => {
           {/* 십이운성 상세 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
             <div className="flex flex-col items-center justify-center border-r border-gray-800 p-2 text-center text-xs">
-              <div>{FIXED_HEADERS.rows[4].main}</div>
+              <div className="hanja-font">{FIXED_HEADERS.rows[4].main}</div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[4].sub}
               </div>
@@ -206,7 +206,9 @@ const SajuChart = () => {
                 key={`twelve-label-${index}`}
                 className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
               >
-                <div className="text-sm font-bold">{detail.main}</div>
+                <div className="text-sm font-bold hanja-font">
+                  {detail.main}
+                </div>
                 <div className="text-gray-500 text-[10px]">{detail.sub}</div>
               </div>
             ))}
@@ -215,7 +217,7 @@ const SajuChart = () => {
           {/* 십이신살 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
             <div className="flex flex-col items-center justify-center border-r border-gray-800 p-2 text-center text-xs">
-              <div>{FIXED_HEADERS.rows[5].main}</div>
+              <div className="hanja-font">{FIXED_HEADERS.rows[5].main}</div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[5].sub}
               </div>
@@ -225,7 +227,9 @@ const SajuChart = () => {
                 key={`twelve-label-${index}`}
                 className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
               >
-                <div className="text-sm font-bold">{spirit.main}</div>
+                <div className="text-sm font-bold hanja-font">
+                  {spirit.main}
+                </div>
                 <div className="text-gray-500 text-[10px]">{spirit.sub}</div>
               </div>
             ))}
@@ -234,7 +238,9 @@ const SajuChart = () => {
           {/* 귀인 행 */}
           <div className="grid grid-cols-5">
             <div className="flex flex-col items-center justify-center border-r border-gray-800 p-2 sm:p-3 text-center text-xs">
-              <div className="font-medium">{FIXED_HEADERS.rows[6].main}</div>
+              <div className="font-medium hanja-font">
+                {FIXED_HEADERS.rows[6].main}
+              </div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[6].sub}
               </div>
@@ -245,13 +251,13 @@ const SajuChart = () => {
                 className="border-r last:border-r-0 border-gray-800 p-1 sm:p-3 min-h-16 flex flex-col justify-center"
               >
                 <div className="text-center space-y-1">
-                  <div className="text-xs sm:text-sm font-bold">
+                  <div className="text-xs sm:text-sm font-bold hanja-font">
                     {noble.main}
                   </div>
                   <div className="text-[10px] text-gray-500">{noble.sub}</div>
                   {noble.extra && (
                     <>
-                      <div className="text-xs sm:text-sm font-bold">
+                      <div className="text-xs sm:text-sm font-bold hanja-font">
                         {noble.extra}
                       </div>
                       <div className="text-[10px] text-gray-500">
