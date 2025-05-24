@@ -25,17 +25,17 @@ const SajuChart = () => {
     ],
     // 천간 데이터 (두 번째 행)
     heavenlyStems: [
-      { main: "辛", top: "신", bottom: "辛金 ", color: "bg-gray-900" },
+      { main: "辛", top: "신", bottom: "辛金", color: "bg-gray-900" },
       { main: "丁", top: "정", bottom: "丁火", color: "bg-teal-700" },
       { main: "丙", top: "병", bottom: "丙火", color: "bg-gray-400" },
-      { main: "癸", top: "계", bottom: "癸水 ", color: "bg-gray-400" },
+      { main: "癸", top: "계", bottom: "癸水", color: "bg-gray-400" },
     ],
     // 지지 데이터 (세 번째 행)
     earthlyBranches: [
-      { main: "亥", top: "해", bottom: "亥水 ", color: "bg-teal-700" },
-      { main: "戊", top: "무", bottom: "戊土 ", color: "bg-red-700" },
-      { main: "戊", top: "무", bottom: "戊土 ", color: "bg-red-700" },
-      { main: "庚", top: "경", bottom: "庚金 ", color: "bg-yellow-600" },
+      { main: "亥", top: "해", bottom: "亥水", color: "bg-teal-700" },
+      { main: "戊", top: "무", bottom: "戊土", color: "bg-red-700" },
+      { main: "戊", top: "무", bottom: "戊土", color: "bg-red-700" },
+      { main: "庚", top: "경", bottom: "庚金", color: "bg-yellow-600" },
     ],
     // 십이운성 라벨 (네 번째 행)
     twelveLabels: [
@@ -112,8 +112,10 @@ const SajuChart = () => {
 
           {/* 천간 행 */}
           <div className="grid grid-cols-5 border-b border-gray-800">
-            <div className="flex flex-col items-center justify-center border-r border-gray-800 p-1 text-center text-xs hanja-font">
-              <div>{FIXED_HEADERS.rows[1].main}</div>
+            <div className="flex flex-col items-center justify-center border-r border-gray-800 p-1 text-center text-xs">
+              <div className='className="hanja-font"'>
+                {FIXED_HEADERS.rows[1].main}
+              </div>
               <div className="text-gray-500 text-[10px]">
                 {FIXED_HEADERS.rows[1].sub}
               </div>

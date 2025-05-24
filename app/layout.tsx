@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Serif_KR, Sawarabi_Mincho } from "next/font/google";
+import { Noto_Serif_KR, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,12 +15,12 @@ const notoSerifKR = Noto_Serif_KR({
   variable: "--font-noto-serif-kr",
 });
 
-// 일본어/한자용 폰트
-const sawarabiMincho = Sawarabi_Mincho({
-  weight: "400",
+// 일본어/한자용 폰트 (광범위한 한자 지원)
+const notoSerifJP = Noto_Serif_JP({
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sawarabi-mincho",
+  variable: "--font-noto-serif-jp",
 });
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={`${notoSerifKR.variable} ${sawarabiMincho.variable}`}>
+      <body className={`${notoSerifKR.variable} ${notoSerifJP.variable}`}>
         {children}
       </body>
     </html>
