@@ -11,6 +11,18 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sawarabi-mincho), serif;
+    /* 기본 폰트는 한글용 */
+    font-family: "Noto Serif KR", serif;
+  }
+
+  /* 한자(CJK 통합 한자) 범위에만 Sawarabi Mincho 적용 */
+  * {
+    font-family: "Noto Serif KR", serif;
+  }
+
+  /* 한자 유니코드 범위 */
+  *:lang(zh), /* 중국어 한자 */
+    [lang*="zh"] * {
+    font-family: "Sawarabi Mincho", "Noto Serif KR", serif;
   }
 }

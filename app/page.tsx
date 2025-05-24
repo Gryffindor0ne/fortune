@@ -44,10 +44,10 @@ const Home = () => {
               {/* 말풍선 위에 오버레이되는 텍스트 */}
               <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
                 <div className="text-center max-w-full pt-6">
-                  <p className="text-sm sm:text-base md:text-lg text-gray-800 font-medium leading-tight">
+                  <p className="text-sm min-[340px]:text-base min-[370px]:text-lg text-gray-800 font-medium leading-tight">
                     이제 본격적으로
                     <br />
-                    {`제가 ${getLastTwoChars(name)}님의 사주팔자를`}
+                    {`${getLastTwoChars(name)}님의 사주팔자를`}
                     <br />
                     분석해볼 차례네요
                   </p>
@@ -83,7 +83,7 @@ const Home = () => {
               {/* 말풍선 위에 오버레이되는 텍스트 */}
               <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 md:p-8">
                 <div className="text-center max-w-full pb-6">
-                  <p className="text-sm sm:text-base md:text-lg text-gray-800 font-medium leading-tight">
+                  <p className="text-sm min-[340px]:text-base min-[370px]:text-lg text-gray-800 font-medium leading-tight">
                     {`제가 ${getLastTwoChars(name)}님의 사주를`}
                     <br />
                     보기 쉽게 표로 정리했어요

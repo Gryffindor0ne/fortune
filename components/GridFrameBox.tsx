@@ -20,6 +20,7 @@ const GridFrameBox = ({ userInfo }: UserInfoProps) => {
 
   // 포맷 지정
   const formattedDate = format(date, "yyyy년 M월 d일 HH:mm");
+
   return (
     <div className="w-full px-2">
       <div className="mb-8">
@@ -42,7 +43,7 @@ const GridFrameBox = ({ userInfo }: UserInfoProps) => {
                   className="object-obtain"
                 />
               </div>
-              <p className="flex justify-center items-end text-gray-800 text-sm sm:text-base">
+              <p className="flex justify-center items-end text-gray-800 text-[12px] min-[330px]:text-sm  min-[380px]:text-base">
                 {userInfo.name}님의 사주
               </p>
               <div className="flex justify-end">
