@@ -76,7 +76,7 @@ const SajuChart = () => {
   return (
     <div className="w-full px-1">
       {/* 메인 테이블 */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto pb-8">
         <div className="min-w-[340px] border-r border-b border-gray-800">
           {/* 헤더 행 */}
           <div className="grid grid-cols-5 border-b-2 border-gray-800">
@@ -102,7 +102,7 @@ const SajuChart = () => {
             {sajuData.tenStars.map((star, index) => (
               <div
                 key={`star-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
+                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs bg-white"
               >
                 <div className="text-sm font-bold hanja-font">{star.main}</div>
                 <div className="text-[10px] text-gray-500">{star.sub}</div>
@@ -121,7 +121,7 @@ const SajuChart = () => {
             {sajuData.heavenlyStems.map((stem, index) => (
               <div
                 key={`stem-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1.5 flex justify-center"
+                className="border-r last:border-r-0 border-gray-800 p-1.5 flex justify-center bg-white"
               >
                 <div
                   className={`w-14 h-14 ${stem.color} text-white flex flex-col items-center justify-center font-bold rounded-xl relative`}
@@ -153,7 +153,7 @@ const SajuChart = () => {
             {sajuData.earthlyBranches.map((branch, index) => (
               <div
                 key={`branch-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1.5 flex justify-center"
+                className="border-r last:border-r-0 border-gray-800 p-1.5 flex justify-center  bg-white"
               >
                 <div
                   className={`w-14 h-14 ${branch.color} text-white flex flex-col items-center justify-center font-bold rounded-xl relative`}
@@ -185,7 +185,7 @@ const SajuChart = () => {
             {sajuData.twelveLabels.map((label, index) => (
               <div
                 key={`twelve-label-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
+                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs  bg-white"
               >
                 <div className="text-sm font-bold hanja-font">{label.main}</div>
                 <div className="text-gray-500 text-[10px]">{label.sub}</div>
@@ -204,7 +204,7 @@ const SajuChart = () => {
             {sajuData.twelveDetails.map((detail, index) => (
               <div
                 key={`twelve-label-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
+                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs  bg-white"
               >
                 <div className="text-sm font-bold hanja-font">
                   {detail.main}
@@ -225,7 +225,7 @@ const SajuChart = () => {
             {sajuData.spirits.map((spirit, index) => (
               <div
                 key={`twelve-label-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs"
+                className="border-r last:border-r-0 border-gray-800 p-1 text-center text-xs  bg-white"
               >
                 <div className="text-sm font-bold hanja-font">
                   {spirit.main}
@@ -248,7 +248,7 @@ const SajuChart = () => {
             {sajuData.nobles.map((noble, index) => (
               <div
                 key={`noble-${index}`}
-                className="border-r last:border-r-0 border-gray-800 p-1 sm:p-3 min-h-16 flex flex-col justify-center"
+                className="border-r last:border-r-0 border-gray-800 p-1 sm:p-3 min-h-16 flex flex-col justify-center  bg-white"
               >
                 <div className="text-center space-y-1">
                   <div className="text-xs sm:text-sm font-bold hanja-font">
